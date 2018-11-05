@@ -18,12 +18,12 @@ from heapq import *
 
 # Time Complexity: O(n logn)
 # Space Complexity: O(1)
+# negate items to convert to Max Heap
 def heapsort(arr):
 	heap = []
 	for item in arr:
-		heappush(heap, item)
-	print(heap)
-	return [heappop(heap) for _ in range(len(heap))]
+		heappush(heap, -item)
+	return [-heappop(heap) for _ in range(len(heap))]
 
 a = [1, 5, 2, 3, 4]
 print(heapsort(a))
