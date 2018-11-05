@@ -2,7 +2,6 @@
 
 def merge(a, b):
 	merged_array = []
-	min_len = min(len(a), len(b))
 
 	i = j = 0
 	while i < len(a) and j < len(b):
@@ -31,10 +30,6 @@ def mergeSort(a):
 	left = mergeSort(left)
 	right = mergeSort(right)
 	result = merge(left, right)
-	print(left, right)
-	print(result)
-	print('')
-	# print(result)
 
 	return result
 
